@@ -21,7 +21,7 @@
 
 
         <!-- home screen -->
-        <section class="home text-white flex flex-col text-center hidden">
+        <section class="home text-white flex flex-col text-center ">
             <div class="flex flex-col items-center  gap-10 min-h-screen justify-center">
                 <h1 class="text-9xl anton_font">ALPHABET CLASH</h1>
                 <p>Unleash Your Keyboard Kung Fu : Press “Enter” to Play</p>
@@ -29,7 +29,7 @@
             </div>
         </section>
         <!-- play ground -->
-        <section class="play_ground">
+        <section class="play_ground hidden">
             <div class="flex flex-col items-center pt-20 gap-20">
                 <!-- screen -->
                 <div class="artboard artboard-horizontal phone-6 border-[20px] rounded-2xl border-[#010313CC] bg-[#ffffffb3]">
@@ -92,7 +92,18 @@
             </div>
         </section>
         <!-- score -->
-        <section class="score"></section>
+        <section class="score hidden">
+            <div class="text-white flex flex-col items-center min-h-screen border justify-center">
+                <div class=" flex flex-col  bg-gradient-to-r from-[#FFFFFF8F] to-[#6b30dacf] p-6 rounded-xl justify-center gap-7 items-center">
+                    <h1 class="text-8xl space-y-6"> 
+                        <span>Score :</span>
+                        <span>14</span>
+                    </h1>
+                    <button class="btn text-[#010313] text-[18px]">Play Aging</button>
+                    <p class="font-medium text-[20px]">Practice will make you Pro</p>
+                </div>
+            </div>
+        </section>
     </main>
 
 </body>
