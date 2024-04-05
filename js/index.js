@@ -17,7 +17,7 @@ document.addEventListener('keyup', function (event) {
         const newScore = currentScore + 1;
 
         // set new life score
-        setElementNumber('current_score', newScore)
+        setInnerNumber('current_score', newScore)
 
 
         // clear perused click element background
@@ -38,7 +38,7 @@ document.addEventListener('keyup', function (event) {
         const upDateLife = currentLife - 1;
 
         // display new element in website
-        setElementNumber('current_life', upDateLife)
+        setInnerNumber('current_life', upDateLife)
 
 
         if (upDateLife === 0) {
@@ -80,8 +80,8 @@ function play() {
     showElementById('play_ground')
 
     // reset previous life and score
-    setElementNumber('current_life', 5);
-    setElementNumber('current_score', 0)
+    setInnerNumber('current_life', 5);
+    setInnerNumber('current_score', 0)
 
 
     // continueGame function
@@ -96,8 +96,14 @@ function gameOver() {
     hiddenElementById('play_ground');
     showElementById('show_score');
 
-    // 
+    // update final score
+    const lastScore = getInnerNumber('current_score');
+    setInnerNumber('last_score', lastScore);
 
 
+    // clear the last selected alphabet highlight
+
+    const currentAlphabet = getInnerContent('current_alphabet');
+    removeBackgroundColorById(currentAlphabet);
 
 }

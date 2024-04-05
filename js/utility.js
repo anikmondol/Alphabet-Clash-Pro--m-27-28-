@@ -58,7 +58,7 @@ function getInnerNumber(elementId){
     return elementNumber;
 }
 
-function setElementNumber(elementId, value){
+function setInnerNumber(elementId, value){
     const element = document.getElementById(elementId);
     element.innerText = value;
 }
