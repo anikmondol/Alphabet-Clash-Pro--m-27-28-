@@ -2,6 +2,12 @@ document.addEventListener('keyup', function (event) {
 
     //get player to pressed 
     const playerPressed = event.key;
+    
+
+    if(playerPressed === 'Escape'){
+        gameOver();
+    }
+    
 
     // key player is expected to pressed
     const currentAlphabet = getInnerContent('current_alphabet');
